@@ -28,12 +28,5 @@ for(i=0; i<10; i++){
 }
 
 
-let container = document.querySelector(".container")
-let button = document.querySelector("button").addEventListener("click", event =>{
-    event.preventDefault()
-    container.classList.add("down")
-    
-    document.body.style.overflow = "hidden"; 
 
-})
 
