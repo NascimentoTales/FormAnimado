@@ -5,19 +5,20 @@
 };
 
 body{
-    
+    background-color: gray;
+    margin: auto;
     .container{
-        width: 250px;
+        width: 280px;
         height: 300px;
         border: 1px solid;
         padding: 10px;
-        margin: 100px auto;
+        margin: 150px auto;
         background-color: aqua;
-        
+
         form{
             display: flex;
             flex-direction: column;
-            width: 200px;
+            width: 230px;
             margin: auto;
             margin-top: 20px;
             
@@ -32,6 +33,50 @@ body{
                 padding: 10px 0px;
                 margin-top: 10px;
             }
+        }
+    }
+    .validate{
+        animation-name: nono;
+        animation-iteration-count: 2;
+        animation-duration: 200ms;
+    }
+    
+
+
+    @keyframes nono {
+        0%{
+            transform: translateX(0);
+        }35%{
+            transform: translateX(-10%);
+        }70%{
+            transform: translateX(10%);
+
+        }100%{
+            transform: translateX(0%);
+        }
+    }
+
+    .squares{
+       
+
+        li{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.151);
+            bottom: 0;
+            display: flex;
+            animation: up 5s infinite alternate;
+            z-index: -10;
+        }
+    }
+    
+    
+    @keyframes up {
+        from{
+            transform: translateY(0);
+        }to{
+            transform: translateY(-680px) rotate(960deg);
         }
     }
 }

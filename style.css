@@ -5,12 +5,17 @@
           box-sizing: border-box;
 }
 
+body {
+  background-color: gray;
+  margin: auto;
+}
+
 body .container {
-  width: 250px;
+  width: 280px;
   height: 300px;
   border: 1px solid;
   padding: 10px;
-  margin: 100px auto;
+  margin: 150px auto;
   background-color: aqua;
 }
 
@@ -22,7 +27,7 @@ body .container form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 200px;
+  width: 230px;
   margin: auto;
   margin-top: 20px;
 }
@@ -35,5 +40,88 @@ body .container form input {
 body .container form button {
   padding: 10px 0px;
   margin-top: 10px;
+}
+
+body .validate {
+  -webkit-animation-name: nono;
+          animation-name: nono;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+}
+
+@-webkit-keyframes nono {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  35% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  70% {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes nono {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  35% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  70% {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+body .squares li {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.151);
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: up 5s infinite alternate;
+          animation: up 5s infinite alternate;
+  z-index: -10;
+}
+
+@-webkit-keyframes up {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-680px) rotate(960deg);
+            transform: translateY(-680px) rotate(960deg);
+  }
+}
+
+@keyframes up {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-680px) rotate(960deg);
+            transform: translateY(-680px) rotate(960deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
