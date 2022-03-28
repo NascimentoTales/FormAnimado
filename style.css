@@ -8,14 +8,17 @@
 body {
   background-color: gray;
   margin: auto;
+  width: 100vw;
+  height: 100vh;
 }
 
 body .container {
-  width: 280px;
+  max-width: 230px;
+  width: 90%;
   height: 300px;
   border: 1px solid;
   padding: 10px;
-  margin: 150px auto;
+  margin: 100px auto;
   background-color: aqua;
 }
 
@@ -27,7 +30,7 @@ body .container form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 230px;
+  width: 200px;
   margin: auto;
   margin-top: 20px;
 }
@@ -104,24 +107,65 @@ body .squares li {
 }
 
 @-webkit-keyframes up {
-  from {
+  0% {
+    opacity: 0;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  to {
-    -webkit-transform: translateY(-680px) rotate(960deg);
-            transform: translateY(-680px) rotate(960deg);
+  25% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-120vh) rotate(960deg);
+            transform: translateY(-120vh) rotate(960deg);
+    opacity: 0;
   }
 }
 
 @keyframes up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-120vh) rotate(960deg);
+            transform: translateY(-120vh) rotate(960deg);
+    opacity: 0;
+  }
+}
+
+body .down {
+  -webkit-animation: down;
+          animation: down;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes down {
   from {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   to {
-    -webkit-transform: translateY(-680px) rotate(960deg);
-            transform: translateY(-680px) rotate(960deg);
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+  }
+}
+
+@keyframes down {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,3 @@
-document.body.style.overflow = "hidden" 
 
 let squares = document.querySelector(".squares");
 
@@ -27,4 +26,14 @@ for(i=0; i<10; i++){
     squares.appendChild(li)
     squares.classList.add("up")
 }
+
+
+let container = document.querySelector(".container")
+let button = document.querySelector("button").addEventListener("click", event =>{
+    event.preventDefault()
+    container.classList.add("down")
+    
+    document.body.style.overflow = "hidden"; 
+
+})
 

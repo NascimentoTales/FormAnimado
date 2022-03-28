@@ -7,18 +7,21 @@
 body{
     background-color: gray;
     margin: auto;
+    width: 100vw;
+    height: 100vh;
     .container{
-        width: 280px;
+        max-width: 230px;
+        width: 90%;
         height: 300px;
         border: 1px solid;
         padding: 10px;
-        margin: 150px auto;
+        margin: 100px auto;
         background-color: aqua;
 
         form{
             display: flex;
             flex-direction: column;
-            width: 230px;
+            width: 200px;
             margin: auto;
             margin-top: 20px;
             
@@ -33,6 +36,7 @@ body{
                 padding: 10px 0px;
                 margin-top: 10px;
             }
+            
         }
     }
     .validate{
@@ -73,10 +77,28 @@ body{
     
     
     @keyframes up {
+        0%{
+            opacity: 0;
+            transform: translateY(0);
+        }25%{
+            opacity: 1;
+        }100%{
+            transform: translateY(-120vh) rotate(960deg);
+            opacity: 0;
+        }
+    }
+
+    .down{
+        animation: down;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes down {
         from{
             transform: translateY(0);
-        }to{
-            transform: translateY(-680px) rotate(960deg);
+        }
+        to{
+            transform: translateY(500px);
         }
     }
 }
