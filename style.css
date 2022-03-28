@@ -7,9 +7,6 @@
 
 body {
   background-color: gray;
-  margin: auto;
-  width: 100vw;
-  height: 100vh;
 }
 
 body .container {
@@ -96,7 +93,7 @@ body .squares li {
   position: absolute;
   width: 40px;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.151);
+  background-color: rgba(243, 243, 243, 0.685);
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,7 +109,7 @@ body .squares li {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  25% {
+  50% {
     opacity: 1;
   }
   100% {
@@ -128,7 +125,7 @@ body .squares li {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  25% {
+  50% {
     opacity: 1;
   }
   100% {
@@ -153,8 +150,8 @@ body .down {
             transform: translateY(0);
   }
   to {
-    -webkit-transform: translateY(500px);
-            transform: translateY(500px);
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
   }
 }
 
@@ -164,8 +161,8 @@ body .down {
             transform: translateY(0);
   }
   to {
-    -webkit-transform: translateY(500px);
-            transform: translateY(500px);
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,9 +6,12 @@
 
 body{
     background-color: gray;
-    margin: auto;
-    width: 100vw;
-    height: 100vh;
+    // margin: auto;
+    // width: 100vw;
+    // height: 100vh;
+    // border: 1px solid;
+    // overflow: hidden;
+    
     .container{
         max-width: 230px;
         width: 90%;
@@ -64,7 +67,7 @@ body{
             position: absolute;
             width: 40px;
             height: 40px;
-            background-color: rgba(0, 0, 0, 0.151);
+            background-color: rgba(243, 243, 243, 0.685);
             bottom: 0;
             display: flex;
             animation: up 5s infinite alternate;
@@ -77,7 +80,7 @@ body{
         0%{
             opacity: 0;
             transform: translateY(0);
-        }25%{
+        }50%{
             opacity: 1;
         }100%{
             transform: translateY(-120vh) rotate(960deg);
@@ -88,14 +91,14 @@ body{
     .down{
         animation: down;
         animation-duration: 1.5s;
-        animation-fill-mode: forwards;
+        animation-fill-mode: forwards; 
     }
     @keyframes down {
         from{
             transform: translateY(0);
         }
         to{
-            transform: translateY(500px);
+            transform: translateY(100vh);
         }
     }
 }
